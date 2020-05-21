@@ -3,7 +3,7 @@
 
 import * as Viewer from '../viewer';
 import * as NARC from './narc';
-
+//
 import { DataFetcher } from '../DataFetcher';
 import ArrayBufferSlice from '../ArrayBufferSlice';
 import { GfxDevice, GfxHostAccessPass, GfxRenderPass } from '../gfx/platform/GfxPlatform';
@@ -18,15 +18,35 @@ import { SceneContext } from '../SceneBase';
 import { parseNSBMD, BTX0, parseNSBTX, fx32, TEX0, MDL0Model } from './NNS_G3D';
 import { CameraController } from '../Camera';
 import { AABB } from '../Geometry';
-
+/*Above, we import AABB into Geometry
+Here is everything we have imported so far, the following if you will and whereas in that order and represented therein :D like so :
+Viewer
+NARC
+DataFetcher
+ArrayBufferSlice
+GfxDevice, GfxHostAccessPass, GfxRenderPass
+MDL0Renderer, G3DPass
+assert, assertExists
+mat4
+BasicRenderTarget, depthClearRenderPassDescriptor, opaqueBlackFullClearRenderPassDescriptor
+FakeTextureHolder
+GfxRenderInstManager
+SceneContext
+parseNSBMD, BTX0, parseNSBTX, fx32, TEX0, MDL0Model
+CameraController
+*/
 const pathBase = `PokemonPlatinum`;
 class ModelCache {
     private filePromiseCache = new Map<string, Promise<ArrayBufferSlice>>();
     public fileDataCache = new Map<string, ArrayBufferSlice>();
 
-    constructor(private dataFetcher: DataFetcher) {
+    constructor(private dataFetcher: DataFetcher) { //Set a path base and fetch data
     }
 
+    //TODO: Document more of it
+    
+    
+    
     public waitForLoad(): Promise<any> {
         const p: Promise<any>[] = [... this.filePromiseCache.values()];
         return Promise.all(p);
