@@ -4,13 +4,30 @@
 import * as Viewer from '../viewer';
 import * as NARC from './narc';
 
-import { DataFetcher } from '../DataFetcher';
-import ArrayBufferSlice from '../ArrayBufferSlice';
-import { GfxDevice, GfxHostAccessPass, GfxRenderPass } from '../gfx/platform/GfxPlatform';
-import { MDL0Renderer, G3DPass } from './render';
-import { assert, assertExists, readString } from '../util';
-import { mat4 } from 'gl-matrix';
+import { DataFetcher } from '../DataFetcher'; // Import DataFetcher
+import ArrayBufferSlice from '../ArrayBufferSlice'; // Import ArrayBufferSlice
+import { GfxDevice, GfxHostAccessPass, GfxRenderPass } from '../gfx/platform/GfxPlatform'; // Import GFX modules, three to be exact.
+import { MDL0Renderer, G3DPass } from './render'; /     // Import MDL0Renderer and link it to G3DPass which both are tied to ./render
+import { assert, assertExists, readString } from '../util'; //Import assertion and string reading modules
+import { mat4 } from 'gl-matrix'; '//Import the submodule mat4 from the module gl-matrix
 import { BasicRenderTarget, depthClearRenderPassDescriptor, transparentBlackFullClearRenderPassDescriptor } from '../gfx/helpers/RenderTargetHelpers';
+/*Above, we import BasicRenderTarget and a DepthDescriptor
+Below, we import the following:
+FakeTextureHolder
+GfxRenderInstManager
+GfxRenderDynamicUniformBuffer
+SceneContext
+parseNSBMD, 
+BTX0
+parseNSBTX
+fx32
+TEX0
+MDL0Model
+CameraController
+Camera
+PlatinumMapRenderer
+tryMDL0
+checkTEX0Compatible
 import { FakeTextureHolder } from '../TextureHolder';
 import { GfxRenderInstManager } from '../gfx/render/GfxRenderer';
 import { GfxRenderDynamicUniformBuffer } from '../gfx/render/GfxRenderDynamicUniformBuffer';
@@ -20,7 +37,7 @@ import { CameraController, Camera } from '../Camera';
 import { AABB } from '../Geometry';
 import { MapData } from '../kh/render';
 import { PlatinumMapRenderer, tryMDL0, checkTEX0Compatible } from './Scenes_PokemonPlatinum';
-
+//Import all assets, like renderer, scene, GFX, camera controller, etc.
 const pathBase = `PokemonSoulSilver`;
 class ModelCache {
     private filePromiseCache = new Map<string, Promise<ArrayBufferSlice>>();
