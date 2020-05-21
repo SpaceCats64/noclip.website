@@ -28,6 +28,7 @@ Camera
 PlatinumMapRenderer
 tryMDL0
 checkTEX0Compatible
+*/
 import { FakeTextureHolder } from '../TextureHolder';
 import { GfxRenderInstManager } from '../gfx/render/GfxRenderer';
 import { GfxRenderDynamicUniformBuffer } from '../gfx/render/GfxRenderDynamicUniformBuffer';
