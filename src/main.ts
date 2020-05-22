@@ -54,8 +54,8 @@ import * as Scenes_SpongeBobBFBB from './SpongeBobBFBB/scenes'
 import * as Scenes_SuperSmashBrosMelee from './SuperSmashBrosMelee/Scenes_SuperSmashBrosMelee';
 import * as Scenes_PokemonSnap from './PokemonSnap/scenes';
 import * as Scenes_MetroidPrimeHunters from './MetroidPrimeHunters/Scenes_MetroidPrimeHunters';
-import * as Scenes_PokemonPlatinum from './nns_g3d/Scenes_PokemonPlatinum';
-import * as Scenes_PokemonSoulSilver from './nns_g3d/Scenes_PokemonSoulSilver';
+import * as Scenes_PokemonPlatinum from './nns_g3d/Scenes_PokemonPlatinum'; // Pokemon Platinum, we import scenes of it.
+import * as Scenes_PokemonSoulSilver from './nns_g3d/Scenes_PokemonSoulSilver'; //Pokemon SoulSilver, here we import scenes of it.
 import * as Scenes_WiiUTransferTool from './rres/Scenes_WiiUTransferTool';
 import * as Scenes_GoldenEye007 from './GoldenEye007/Scenes_GoldenEye007';
 import * as Scenes_BanjoTooie from './BanjoTooie/scenes';
